@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+}
+.header {
+  /*for the header element, we seet the width to be 100% of entire screen. we block the position using fixed posn and keep z index as 1 for it to be present on the screen throughout the web page*/
+  width: 100%;
+  height: 65px;
+  display: inline-block;
+  margin: 0cm auto;
+  background-color: #101010;
+  position: sticky;
+  z-index: 2;
+  border-bottom: blue;
+}
+.name {
+  /*this sets font style to the team name, and also places it in the middle of head tag*/
+  font-family: "serif", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: aliceblue;
+  vertical-align: middle;
+  font-size: 25px;
+  font-weight: 700;
+  z-index: 2;
+}
+.h333 {
+  /* font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    background-color: rgb(136, 40, 15);
+    width: 99.99%;
+    text-align: center;
+    margin: 0.1rem;
+    box-sizing: border-box;
+    overflow: hidden; */
+  box-sizing: border-box;
+  background-color: rgb(34, 36, 39);
+  margin-top: 0;
+  padding: 2px;
+  /* color: cornsilk; */
+}
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: cornsilk;
+  font-style: italic;
+}
+.top-pane {
+  background-color: rgb(60, 62, 68);
+  z-index: 0;
+  /* padding-top: 60px; */
+}
+.pane {
+  display: flex;
+  height: 50%;
+}
+.editor_container {
+  flex-grow: 1;
+  /* justify-content: space-between; */
+  flex-basis: 0;
+  flex-direction: column;
+  display: flex;
+  padding: 0.5rem;
+  /* background-color: rgb(187, 177, 248); */
+  background-color: rgb(60, 62, 68);
+  box-sizing: border-box;
+  /* border: 1px solid rgb(6, 6, 43); */
+  z-index: 0;
+  /* last two extra */
+}
+.editor_container:hover {
+  flex-grow: 1;
+  flex-basis: 0cm;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background-color: rgb(80, 84, 95);
+}
+.editor_container.collapsed {
+  flex-grow: 0;
+}
+.editor_title {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: dimgray; */
+  background-color: rgb(34, 36, 39);
+  /* padding: .3rem; */
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  /* border: 2px solid rgb(27, 3, 71); */
+  color: cornsilk;
+  font-style: oblique;
+  font-weight: bold;
+  border-top-left-radius: 0.5rem;
+}
+hr {
+  color: rgb(5, 5, 27);
+  padding: 0.1px;
+  background-color: rgb(1, 1, 15);
+  border-top: 1px solid rgb(6, 6, 8);
+  top: 60px;
+}
+.Codemirror {
+  height: 100% !important;
+}
+.code_mirror_wrapper {
+  flex-grow: 1;
+  /* border-bottom-left-radius: 0.5rem; */
+  border-bottom-right-radius: 0.5rem;
+  overflow: hidden;
+}
+.btn {
+  background: none;
+  color: cornsilk;
+  border: none;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.btn:hover {
+  /*changes cursor to hover when hovered upon the button*/
+  cursor: grab;
+}
+.footer {
+  box-sizing: border-box;
+  /* background-color: darkgrey; */
+  background-color: rgb(238, 238, 238);
+  /* padding-bottom: 3px; */
+  margin-bottom: 0;
+  /* border: 1px solid brown; */
+}
+footer {
+  /* color: rgb(63, 6, 36); */
+  color: rgb(9, 29, 117);
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: oblique;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  text-align: right;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 3px;
+  font-size: 0.8rem;
+}
+@media (max-width: 1024px) {
+  .pane {
+    display: grid;
+    flex-direction: column;
+  }
+  footer {
+    /* color: rgb(63, 6, 36); */
+    color: rgb(9, 29, 117);
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    text-align: right;
+  }
+}
